@@ -12,7 +12,7 @@ import Desktop from './Desktop'
 
 function LandingPage() {
   return (
-    <>
+    <div className='bg-[#f7faff]'>
         <Navbar/>
         <Hero/>
         <Desktop/>
@@ -23,7 +23,7 @@ function LandingPage() {
         <Testimonials/>
         <FAQs/>
         <Footer/>
-    </>
+    </div>
   )
 }
 
