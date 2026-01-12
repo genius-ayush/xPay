@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import LogoMarquee from "../ui/logo-marquee";
 

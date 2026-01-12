@@ -72,13 +72,13 @@ export default function IndustriesSection() {
 
         {/* Tabs */}
         <Tabs.Root defaultValue="edtech" className="mt-10">
-          <Tabs.List className="flex justify-center gap-8 text-[15px] text-gray-500">
+          <Tabs.List className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[15px] text-gray-500 overflow-x-auto pb-4">
             {INDUSTRIES.map((tab) => (
               <Tabs.Trigger
                 key={tab.key}
                 value={tab.key}
                 className={cn(
-                  "relative pb-2 transition-colors",
+                  "relative pb-2 transition-colors whitespace-nowrap",
                   "data-[state=active]:text-gray-900",
                   "after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-blue-600 after:transition-transform",
                   "data-[state=active]:after:scale-x-100"
@@ -90,33 +90,34 @@ export default function IndustriesSection() {
           </Tabs.List>
 
           {/* Cards */}
-          <div className="mt-14">
+          <div className="mt-8 sm:mt-14">
             {INDUSTRIES.map((item) => (
               <Tabs.Content key={item.key} value={item.key}>
-                <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl flex flex-col lg:block">
                   {/* background image */}
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={1200}
-                    height={600}
-                    className="h-[420px] w-full object-cover"
-                    priority
-                  />
+                  <div className="relative h-[250px] sm:h-[350px] lg:h-[420px] w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
 
                   {/* content card */}
-                  <div className="absolute left-10 top-1/2 w-[520px] -translate-y-1/2 rounded-2xl bg-white p-10 shadow-lg">
-                    <h3 className="text-2xl font-semibold text-gray-900">
+                  <div className="relative lg:absolute lg:left-10 lg:top-1/2 lg:w-[520px] lg:-translate-y-1/2 rounded-b-2xl lg:rounded-2xl bg-white p-6 sm:p-10 shadow-lg text-left">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                       {item.title}
                     </h3>
 
-                    <p className="mt-4 whitespace-pre-line text-[15px] leading-relaxed text-gray-600">
+                    <p className="mt-4 whitespace-pre-line text-sm sm:text-[15px] leading-relaxed text-gray-600">
                       {item.desc}
                     </p>
 
                     <Button
                       size="lg"
-                      className="mt-8 rounded-full bg-blue-600 px-6 hover:bg-blue-700"
+                      className="mt-6 sm:mt-8 rounded-full bg-blue-600 px-6 hover:bg-blue-700 w-full sm:w-auto"
                     >
                       Get In Touch →
                     </Button>

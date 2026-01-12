@@ -22,14 +22,14 @@ export default function PricingSection() {
       </div>
 
       {/* floating flags */}
-      <Flag className="left-[14%] top-[30%]" emoji="🇨🇭" />
-      <Flag className="left-[18%] top-[45%]" emoji="🇦🇷" />
-      <Flag className="left-[15%] top-[60%]" emoji="🇬🇧" />
-      <Flag className="left-[20%] top-[75%]" emoji="🇧🇩" />
+      <Flag className="left-[14%] top-[30%] hidden md:block" emoji="🇨🇭" />
+      <Flag className="left-[18%] top-[45%] hidden md:block" emoji="🇦🇷" />
+      <Flag className="left-[15%] top-[60%] hidden md:block" emoji="🇬🇧" />
+      <Flag className="left-[20%] top-[75%] hidden md:block" emoji="🇧🇩" />
 
-      <Flag className="right-[18%] top-[30%]" emoji="🇮🇳" />
-      <Flag className="right-[14%] top-[45%]" emoji="🇨🇦" />
-      <Flag className="right-[18%] top-[60%]" emoji="🇺🇸" />
+      <Flag className="right-[18%] top-[30%] hidden md:block" emoji="🇮🇳" />
+      <Flag className="right-[14%] top-[45%] hidden md:block" emoji="🇨🇦" />
+      <Flag className="right-[18%] top-[60%] hidden md:block" emoji="🇺🇸" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
         {/* pill */}
